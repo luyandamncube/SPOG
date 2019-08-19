@@ -27,7 +27,6 @@ namespace SPOG
                 // Try to *silently* get a token
                 // Silent here means without prompting the user to login.
                 // This will only work if we have a previously cached token
-                //var accounts = await App.PCA.GetAccountsAsync();
                 IAccount firstAccount = accounts.FirstOrDefault();
                 result = await App.PCA.AcquireTokenSilent(App.AppScopes, firstAccount)
                                               .ExecuteAsync();
