@@ -21,8 +21,7 @@ namespace SPOG
             {
                 isRunning = value;
                 slSignIn.IsVisible = !value;
-                spinner.IsVisible = value;
-                spinner.IsRunning = value;
+                loader.IsVisible = value;
             }
         }
 
