@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <EmbeddedResource Include="no-profile-pic.png" />
+
   </ItemGroup>
 
   <ItemGroup>
@@ -35,9 +36,10 @@
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
       <DependentUpon>*.xaml</DependentUpon>
     </Compile>
-    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\MainPage.xaml.cs">
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\EmailPage.xaml.cs">
       <DependentUpon>*.xaml</DependentUpon>
     </Compile>
+
   </ItemGroup>
 
   <ItemGroup>
@@ -71,15 +73,30 @@
     <None Update="App.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
-    <None Update="MainPage.xaml">
+    <None Update="HomePage\HomePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="HomePage\HomePageDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="HomePage\HomePageMaster.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="EmailPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
     <None Update="SignInPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\EmailPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\NewPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
   </ItemGroup>
 
   <Import Project="..\..\SPOGModels\SPOGModels.projitems" Label="Shared" />
 
-  <Import Project="..\..\SPOGViews\SPOGViews.projitems" Label="Shared" />
+  
 </Project>

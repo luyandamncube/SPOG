@@ -59,7 +59,7 @@ namespace SPOG.HomePage
                 MenuItems = new ObservableCollection<HomePageMasterMenuItem>(new[]
                 {
                     new HomePageMasterMenuItem { Id = 0, Title = "New Page", TargetType=typeof(NewPage) },
-                    new HomePageMasterMenuItem { Id = 1, Title = "Email Sender" , TargetType=typeof(MainPage)},
+                    new HomePageMasterMenuItem { Id = 1, Title = "Email Sender" , TargetType=typeof(EmailPage)},
                     new HomePageMasterMenuItem { Id = 2, Title = "Page 3" },
                     new HomePageMasterMenuItem { Id = 3, Title = "Page 4" },
                     new HomePageMasterMenuItem { Id = 4, Title = "About" },

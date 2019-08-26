@@ -15,9 +15,9 @@ using Windows.UI.Xaml.Navigation;
 
 namespace SPOG.UWP
 {
-    public sealed partial class MainPage
+    public sealed partial class EmailPage
     {
-        public MainPage()
+        public EmailPage()
         {
             this.InitializeComponent();
 
