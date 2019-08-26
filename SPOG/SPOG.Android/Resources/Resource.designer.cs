@@ -6659,6 +6659,9 @@ namespace SPOG.Droid
 			// aapt resource value: 0x7f0800ed
 			public const int media_actions = 2131230957;
 			
+			// aapt resource value: 0x7f080105
+			public const int menu_settings = 2131230981;
+			
 			// aapt resource value: 0x7f0800a2
 			public const int message = 2131230882;
 			
@@ -7490,6 +7493,22 @@ namespace SPOG.Droid
 			}
 			
 			private Layout()
+			{
+			}
+		}
+		
+		public partial class Menu
+		{
+			
+			// aapt resource value: 0x7f0e0000
+			public const int home = 2131623936;
+			
+			static Menu()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Menu()
 			{
 			}
 		}

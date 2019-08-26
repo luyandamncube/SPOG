@@ -5,6 +5,8 @@ using Microsoft.Identity.Client;
 
 using Foundation;
 using UIKit;
+using Xamarin.Forms;
+using ImageCircle.Forms.Plugin.iOS;
 
 namespace SPOG.iOS
 {
@@ -23,7 +25,8 @@ namespace SPOG.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            global::Xamarin.Forms.Forms.Init();
+            Forms.Init();
+            ImageCircleRenderer.Init();
             LoadApplication(new App());
             //App.AuthUiParent = new UIParent();
             App.ParentWindow = null;

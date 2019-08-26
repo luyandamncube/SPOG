@@ -4,5 +4,6 @@
     <SelectedDevice>HUAWEI EVA-L19</SelectedDevice>
     <DefaultDevice>dev</DefaultDevice>
     <AndroidDesignerPreferredTheme>Theme.AppCompat.Light.NoActionBar</AndroidDesignerPreferredTheme>
+    <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
   </PropertyGroup>
 </Project>

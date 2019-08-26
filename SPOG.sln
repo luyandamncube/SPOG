@@ -11,7 +11,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPOG.UWP", "SPOG\SPOG.UWP\S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SPOG", "SPOG\SPOG\SPOG.csproj", "{08F77345-CD40-42F9-B6E4-B7FA801A10C7}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SPOGModels", "SPOGModels\SPOGModels.shproj", "{79E6A387-B784-4449-AAC3-F7B3240AFBA3}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SPOGViews", "SPOGViews\SPOGViews.shproj", "{DB98245E-B330-4453-A59B-503F7A0BC59E}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		SPOGModels\SPOGModels.projitems*{79e6a387-b784-4449-aac3-f7b3240afba3}*SharedItemsImports = 13
+		SPOGViews\SPOGViews.projitems*{db98245e-b330-4453-a59b-503f7a0bc59e}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
 		Ad-Hoc|ARM = Ad-Hoc|ARM

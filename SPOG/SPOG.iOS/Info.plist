@@ -55,7 +55,7 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>msal[APP_ID_HERE]</string>
+				<string>msal3bddfad4-aff8-48e7-96c4-4c4fa23b3263</string>
 			</array>
 			<key>CFBundleURLName</key>
 			<string>com.microsoft.SPOG</string>

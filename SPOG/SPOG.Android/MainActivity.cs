@@ -8,11 +8,14 @@ using Android.Widget;
 using Android.OS;
 using Microsoft.Identity.Client;
 using Android.Content;
+using Xamarin.Forms.Platform.Android;
+using Xamarin.Forms;
+using ImageCircle.Forms.Plugin.Droid;
 
 namespace SPOG.Droid
 {
     [Activity(Label = "SPOG", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+    public class MainActivity : FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
         {
@@ -20,12 +23,23 @@ namespace SPOG.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
-
-            global::Xamarin.Forms.Forms.Init(this, bundle);
+            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+            SetActionBar(toolbar);
+            Forms.Init(this, bundle);
+            ImageCircleRenderer.Init();
             LoadApplication(new App());
             App.ParentWindow = this;
         }
-
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.home, menu);
+            return base.OnCreateOptionsMenu(menu);
+        }
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            Toast.MakeText(this, "Top ActionBar pressed: " + item.TitleFormatted, ToastLength.Short).Show();
+            return base.OnOptionsItemSelected(item);
+        }
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
             base.OnActivityResult(requestCode, resultCode, data);
