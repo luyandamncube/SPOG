@@ -7,6 +7,7 @@ using Microsoft.Graph;
 using System.Net.Http.Headers;
 
 using Xamarin.Forms;
+using SPOG.Services;
 
 namespace SPOG
 {
@@ -41,7 +42,8 @@ namespace SPOG
                         new AuthenticationHeaderValue("Bearer", authResult.AccessToken);
                 }
             ));
-
+            var statusBarStyleManager = DependencyService.Get<IStatusBarStyleManager>();
+            statusBarStyleManager.SetLightTheme();
             MainPage = new SignInPage();
         }
 

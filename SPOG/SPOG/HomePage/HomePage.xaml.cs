@@ -27,7 +27,11 @@ namespace SPOG.HomePage
             var page = (Page)Activator.CreateInstance(item.TargetType);
             page.Title = item.Title;
 
-            Detail = new NavigationPage(page);
+            Detail = new NavigationPage(page)
+            {
+                BarTextColor = Color.FromHex("#585858"),
+                //BarBackgroundColor = Color.FromHex("#ffffff"),
+            };
             IsPresented = false;
 
             MasterPage.ListView.SelectedItem = null;

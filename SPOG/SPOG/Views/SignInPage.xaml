@@ -13,9 +13,10 @@
             WidthRequest="300"
             IsVisible="False"
         />
-        <StackLayout x:Name="slSignIn" VerticalOptions="Center" HorizontalOptions="Center" IsVisible="True">
-            <Label Text="Welcome! Click the Sign In button to get started" HorizontalOptions="Center" VerticalOptions="Center"></Label>
-            <Button x:Name="btnSignIn" HorizontalOptions="Center" Text="Sign In" Clicked="SignIn"></Button>
+        <StackLayout Padding="10,20,10,20" x:Name="slSignIn" VerticalOptions="Center" HorizontalOptions="Center" IsVisible="True">
+            <Label Text="Welcome! Click the Sign In button to get started" Style="{StaticResource BoldTextLabelCenter}" VerticalOptions="Center"></Label>
+           
+            <Button x:Name="btnSignIn" Margin="20" Style="{StaticResource PrimaryButton}" Text="Sign In" Clicked="SignIn" />
         </StackLayout>
     </Grid>
 </ContentPage>

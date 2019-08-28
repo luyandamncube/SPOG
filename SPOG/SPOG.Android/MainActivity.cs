@@ -12,6 +12,8 @@ using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms;
 using ImageCircle.Forms.Plugin.Droid;
 
+using Plugin.CurrentActivity;
+
 namespace SPOG.Droid
 {
     [Activity(Label = "SPOG", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
@@ -21,8 +23,8 @@ namespace SPOG.Droid
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
-
             base.OnCreate(bundle);
+            CrossCurrentActivity.Current.Init(this, bundle);
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             SetActionBar(toolbar);
             Forms.Init(this, bundle);

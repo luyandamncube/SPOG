@@ -12,7 +12,6 @@ namespace SPOG.HomePage
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HomePageDetail : ContentPage
     {
-        public ImageSource source = UserModel.imageSource;
         public HomePageDetail()
         {
             InitializeComponent();

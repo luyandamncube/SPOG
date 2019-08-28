@@ -1,4 +1,5 @@
-﻿using SPOGModels;
+﻿using SPOG.Views;
+using SPOGModels;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -25,7 +26,8 @@ namespace SPOG.HomePage
             BindingContext = new HomePageMasterViewModel();
             ListView = MenuItemsListView;
             avatar.Source = UserModel.imageSource;
-            lblUserEmail.Text = UserModel.data.Mail;
+            //lblUserEmail.Text = UserModel.data.Mail;
+            lblUserName.Text = "Hi " + UserModel.data.GivenName + "!";
         }
         async void OnUserTapped(object sender, EventArgs e)
         {
@@ -37,7 +39,8 @@ namespace SPOG.HomePage
         }
         async void OnPhotoTapped(object sender, EventArgs e)
         {
-            await DisplayAlert("Photo tapped", "TODO: Implement this!", "Got it");
+            //await DisplayAlert("Photo tapped", "TODO: Implement this!", "Got it");
+            await Navigation.PushModalAsync(new ProfilePage(), true);
         }
         async void SignOut()
         {
@@ -58,11 +61,10 @@ namespace SPOG.HomePage
             {
                 MenuItems = new ObservableCollection<HomePageMasterMenuItem>(new[]
                 {
-                    new HomePageMasterMenuItem { Id = 0, Title = "New Page", TargetType=typeof(NewPage) },
+                    new HomePageMasterMenuItem { Id = 0, Title = "Calendar", TargetType=typeof(CalendarPage) },
                     new HomePageMasterMenuItem { Id = 1, Title = "Email Sender" , TargetType=typeof(EmailPage)},
-                    new HomePageMasterMenuItem { Id = 2, Title = "Page 3" },
-                    new HomePageMasterMenuItem { Id = 3, Title = "Page 4" },
-                    new HomePageMasterMenuItem { Id = 4, Title = "About" },
+                    new HomePageMasterMenuItem { Id = 2, Title = "About", TargetType=typeof(AboutPage)},
+
                 });
             }
 

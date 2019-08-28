@@ -8,6 +8,7 @@ using Microsoft.Identity.Client;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using SPOGModels;
+using SPOG.Services;
 
 namespace SPOG
 {
@@ -29,6 +30,7 @@ namespace SPOG
         {
             InitializeComponent ();
             BindingContext = this;
+
         }
 
         protected override async void OnAppearing()
@@ -41,7 +43,7 @@ namespace SPOG
             {
                 try
                 {
-
+                    IsRunning = true;
                     // Try to *silently* get a token
                     // Silent here means without prompting the user to login.
                     // This will only work if we have a previously cached token
@@ -49,19 +51,21 @@ namespace SPOG
                     result = await App.PCA.AcquireTokenSilent(App.AppScopes, firstAccount)
                                               .ExecuteAsync();
                     var user = await App.GraphClient.Me.Request()
-                            .Select("displayName,mail,jobTitle,mobilePhone,officeLocation")
+                            .Select("displayName,givenName,mail,jobTitle,mobilePhone,officeLocation")
                             .GetAsync();
                     UserModel.data = user;
-                    await DisplayAlert("User", UserModel.data.DisplayName, "Dismiss");
+                    //await DisplayAlert("Automatic sign in:", UserModel.data.DisplayName, "Dismiss");
                     // Get the user's profile photo
                     var photoStream = await UserModel.GetUserPhoto();
                     UserModel.imageSource = ImageSource.FromStream(() => photoStream);
 
+                    IsRunning = false;
                     // Since we're already logged in, proceed to main page
                     await Navigation.PushModalAsync(new HomePage.HomePage(), true);
                 }
-                catch (MsalUiRequiredException ex) {
-                    await DisplayAlert("Signin Error", ex.Message, "Dismiss");
+                catch (MsalUiRequiredException) {
+                    IsRunning = false;
+                    //await DisplayAlert("Signin Error", ex.Message, "Dismiss");
 
                 }
             }
@@ -79,10 +83,10 @@ namespace SPOG
                                                       .ExecuteAsync();
 
                 var user = await App.GraphClient.Me.Request()
-                            .Select("displayName,mail,jobTitle,mobilePhone,officeLocation")
+                            .Select("displayName,givenName,mail,jobTitle,mobilePhone,officeLocation")
                             .GetAsync();
                 UserModel.data = user;
-                await DisplayAlert("User", UserModel.data.DisplayName, "Dismiss");
+                //await DisplayAlert("User", UserModel.data.DisplayName, "Dismiss");
 
                 // Get the user's profile photo
                 var photoStream = await UserModel.GetUserPhoto();

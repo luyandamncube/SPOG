@@ -5,8 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="SPOG.HomePage.HomePage"
-             xmlns:pages="clr-namespace:SPOG.HomePage"
-                  xmlns:pages1="clr-namespace:SPOG">
+             xmlns:pages="clr-namespace:SPOG.HomePage">
     
   <MasterDetailPage.Master>
     <pages:HomePageMaster x:Name="MasterPage" />
