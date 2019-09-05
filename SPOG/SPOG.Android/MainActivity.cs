@@ -13,6 +13,7 @@ using Xamarin.Forms;
 using ImageCircle.Forms.Plugin.Droid;
 
 using Plugin.CurrentActivity;
+using SPOG.Services;
 
 namespace SPOG.Droid
 {
@@ -31,6 +32,9 @@ namespace SPOG.Droid
             ImageCircleRenderer.Init();
             LoadApplication(new App());
             App.ParentWindow = this;
+            //Change Status bar color/theme to "Light"
+            var statusBarStyleManager = DependencyService.Get<IStatusBarStyleManager>();
+            statusBarStyleManager.SetLightTheme();
         }
         public override bool OnCreateOptionsMenu(IMenu menu)
         {

@@ -7,24 +7,30 @@
              mc:Ignorable="d"
              x:Class="SPOG.Views.ProfilePage">
 
+    <Grid VerticalOptions="Fill">
 
-    <ScrollView>
-        <Grid ColumnSpacing="0" RowSpacing="10">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="AUTO" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="AUTO" />
-                <RowDefinition Height="*" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
-            </Grid.RowDefinitions>
+        <ScrollView Grid.Row="0">
+            <Grid ColumnSpacing="0" RowSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="AUTO" />
+                    <RowDefinition Height="AUTO" />
+                    <RowDefinition Height="AUTO" />
+                    <RowDefinition Height="AUTO" />
 
-            <!--  header background  -->
-            <Image Aspect="AspectFill" Source="HeaderBackground.png" />
-            <Image Aspect="Fill" Margin="0,-1,0,-1" Source="CurvedMask.png" VerticalOptions="End" />
+                </Grid.RowDefinitions>
 
-            <!--  profile image  -->
-            <!--<Image x:Name="avatar" HeightRequest="100" HorizontalOptions="Center" TranslationY="50" VerticalOptions="End" WidthRequest="100" />-->
-            <controls:CircleImage 
+                <!--  header background  -->
+                <Image Aspect="AspectFill" Source="HeaderBackground.png" />
+                <Image Aspect="Fill" Margin="0,-1,0,-1" Source="CurvedMask.png" VerticalOptions="End" />
+
+                <!--  profile image  -->
+                <!--<Image x:Name="avatar" HeightRequest="100" HorizontalOptions="Center" TranslationY="50" VerticalOptions="End" WidthRequest="100" />-->
+                <controls:CircleImage 
                     x:Name="avatar"
                     BorderColor="Gray"
                     BorderThickness="2"
@@ -33,21 +39,23 @@
                     HeightRequest="100"
                     HorizontalOptions="Center"
                     TranslationY="40"
+                    Grid.Row="0"
                     />
-            <!--  Profile Name  -->
-            <StackLayout Grid.Row="1" Padding="0,50,0,00" HorizontalOptions="Center" >
-                <Label  x:Name="lblUsername" Style="{StaticResource BoldTextLabelCenter}" />
-                <Label x:Name="lblJobTitle" Margin="0,-5" Style="{StaticResource TagTextLabel}"/>
-            </StackLayout>
+                <!--  Profile Name  -->
+                <StackLayout Grid.Row="1" Padding="0,50,0,00" HorizontalOptions="Center" >
+                    <Label  x:Name="lblUsername" Style="{StaticResource BoldTextLabelCenter}" />
+                    <Label x:Name="lblJobTitle" Margin="0,-5" Style="{StaticResource TagTextLabel}"/>
+                </StackLayout>
 
-            <Label  x:Name="lblEmail" Grid.Row="2" Style="{StaticResource MainBodyLabel}"  />
+                <Label  x:Name="lblEmail" Grid.Row="2" Style="{StaticResource MainBodyLabel}"  />
 
-            <Label  x:Name="lblOfficeLocation" Grid.Row="3" Style="{StaticResource MainBodyLabel}"  />
-            
-
-
-        </Grid>
-    </ScrollView>
+                <!--<Label  x:Name="lblOfficeLocation" Grid.Row="3" Style="{StaticResource MainBodyLabel}"  />-->
 
 
+
+            </Grid>
+        </ScrollView>
+
+    </Grid>
+    
 </ContentPage>

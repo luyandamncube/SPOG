@@ -26,7 +26,7 @@ namespace SPOG.Views
             avatar.Source = UserModel.imageSource;
             lblJobTitle.Text = UserModel.data.JobTitle;
             lblUsername.Text = UserModel.data.DisplayName;
-            lblOfficeLocation.Text = UserModel.data.OfficeLocation;
+            //lblOfficeLocation.Text = UserModel.data.OfficeLocation;
             lblEmail.Text = UserModel.data.Mail;
         }
     }

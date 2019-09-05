@@ -15,7 +15,7 @@ namespace SPOG
     {
         public static IPublicClientApplication PCA = null;
         public static string AppId = "3bddfad4-aff8-48e7-96c4-4c4fa23b3263";
-        public static string[] AppScopes = { "User.Read", "Mail.Read", "Mail.Send", "Files.ReadWrite", "People.Read" };
+        public static string[] AppScopes = { "User.Read", "Calendars.Read", "Tasks.Read", "Mail.Read", "Mail.Send", "Files.ReadWrite", "People.Read" };
         public static object ParentWindow { get; set; }
         public static bool PendingAuth = false;
 
@@ -42,8 +42,7 @@ namespace SPOG
                         new AuthenticationHeaderValue("Bearer", authResult.AccessToken);
                 }
             ));
-            var statusBarStyleManager = DependencyService.Get<IStatusBarStyleManager>();
-            statusBarStyleManager.SetLightTheme();
+
             MainPage = new SignInPage();
         }
 
