@@ -30,6 +30,7 @@
     <PackageReference Include="Microsoft.Identity.Client" Version="4.3.0" />
     <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
     <PackageReference Include="Xamarin.Forms" Version="4.1.0.673156" />
+    <PackageReference Include="Xamarin.Forms.GoogleMaps" Version="3.2.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -62,10 +63,10 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\AboutPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\CalendarPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\NewPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -75,6 +76,9 @@
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ProfilePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SignInPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>
 
@@ -101,6 +105,9 @@
       <Generator>MSBuild:Compile</Generator>
     </None>
     <None Update="Views\NewPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\ProfilePage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
   </ItemGroup>

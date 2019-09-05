@@ -14,6 +14,7 @@ using ImageCircle.Forms.Plugin.Droid;
 
 using Plugin.CurrentActivity;
 using SPOG.Services;
+using Xamarin.Forms.GoogleMaps.Android;
 
 namespace SPOG.Droid
 {
@@ -27,6 +28,12 @@ namespace SPOG.Droid
             base.OnCreate(bundle);
             CrossCurrentActivity.Current.Init(this, bundle);
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+            //Google Maps config
+            var platformConfig = new PlatformConfig
+            {
+                BitmapDescriptorFactory = new CachingNativeBitmapDescriptorFactory()
+            };
+            Xamarin.FormsGoogleMaps.Init(this, bundle, platformConfig); // initialize for Xamarin.Forms.GoogleMaps
             SetActionBar(toolbar);
             Forms.Init(this, bundle);
             ImageCircleRenderer.Init();

@@ -7,6 +7,7 @@ using Foundation;
 using UIKit;
 using Xamarin.Forms;
 using ImageCircle.Forms.Plugin.iOS;
+using Xamarin.Forms.GoogleMaps.iOS;
 
 namespace SPOG.iOS
 {
@@ -27,6 +28,14 @@ namespace SPOG.iOS
         {
             Forms.Init();
             ImageCircleRenderer.Init();
+
+            //Google Maps config
+            var platformConfig = new PlatformConfig
+            {
+                ImageFactory = new CachingImageFactory()
+            };
+
+            Xamarin.FormsGoogleMaps.Init("AIzaSyDMggkmREZaQbC-QXdsUJLmPBdDh16Ud9w", platformConfig);
             LoadApplication(new App());
             //App.AuthUiParent = new UIParent();
             App.ParentWindow = null;

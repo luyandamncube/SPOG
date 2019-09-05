@@ -3,7 +3,13 @@
 	<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="28" />
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <!-- These are optional, but recommended. They will allow Maps to use the My Location provider. -->
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 	<application android:label="SPOG.Android" android:icon="@drawable/icon">
+    <!-- Put your Google Maps V2 API Key here.-->
+    <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyDMggkmREZaQbC-QXdsUJLmPBdDh16Ud9w" />
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 		<activity android:name="microsoft.identity.client.BrowserTabActivity">
 			<intent-filter>
 				<action android:name="android.intent.action.VIEW" />
