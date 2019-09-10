@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SPOG.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,13 +23,10 @@ namespace SPOG.Views
             base.OnAppearing();
 
             // Get the events
-            var events = await App.GraphClient.Me.Events.Request()
-                .Select("subject,organizer,start,end")
-                .OrderBy("createdDateTime DESC")
-                .GetAsync();
+            await CalenderViewModel.GetCalendarEvents();
 
             // Add the events to the list view
-            CalendarList.ItemsSource = events.CurrentPage.ToList();
+            CalendarList.ItemsSource = CalenderViewModel.CalenderEventsList;
         }
     }
 }

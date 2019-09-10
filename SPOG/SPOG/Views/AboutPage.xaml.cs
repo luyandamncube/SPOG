@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SPOG.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace SPOG.Views
         public AboutPage()
         {
             InitializeComponent();
+            Content.BindingContext = new AppInformation();
         }
     }
 }

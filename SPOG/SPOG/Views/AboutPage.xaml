@@ -6,10 +6,27 @@
              mc:Ignorable="d"
              x:Class="SPOG.Views.AboutPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to About"
-                VerticalOptions="CenterAndExpand" 
+        <StackLayout VerticalOptions="Center" HeightRequest="300">
+            <Grid x:Name="Content" RowSpacing="10" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Text="{Binding AppName}"
+ 
                 HorizontalOptions="CenterAndExpand" />
+                <Label Grid.Row="1" Text="{Binding AppBuild}"
+              
+                HorizontalOptions="CenterAndExpand" />
+                <Label Grid.Row="2" Text="{Binding PackageName}"
+               
+                HorizontalOptions="CenterAndExpand" />
+                <Label Grid.Row="3" Text="{Binding AppVersion}"
+             
+                HorizontalOptions="CenterAndExpand" />
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

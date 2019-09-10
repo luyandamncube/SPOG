@@ -1,106 +1,127 @@
-[
-  {
-    "name": "The Campus, Wembley Building",
-    "type": "Head Office",
-    "street": "57 Sloane Street",
-    "location": "Bryanston",
-    "province": "Gauteng",
-    "country": "South Africa",
-    "latitude": -26.041365,
-    "longitude": 28.022372,
-    "tel": "+27 11 575 0000",
-    "postalCode": "2021",
-    "key": "001"
-  },
-  {
-    "name": "Highveld Technopark",
-    "type": "Automotive",
-    "street": "1 Pieter Street",
-    "location": "Centurion",
-    "province": "Gauteng",
-    "country": "South Africa",
-    "latitude": -25.871361,
-    "longitude": 28.187016,
-    "tel": "+27 11 575 1800",
-    "postalCode": "0157",
-    "key": "002"
-  },
-  {
-    "name": "Regency Office Park",
-    "type": "Regional Office",
-    "street": "9 Pieter Street",
-    "location": "Centurion",
-    "province": "Gauteng",
-    "country": "South Africa",
-    "latitude": -25.870701,
-    "longitude": 28.186161,
-    "tel": "+27 12 648 9800",
-    "postalCode": "0157",
-    "key": "003"
-  },
-  {
-    "name": "Central Building 4th Floor",
-    "type": "Regional Office",
-    "street": "2 Fir Road",
-    "location": "Black River Park, Observatory",
-    "province": "Cape Town",
-    "country": "South Africa",
-    "latitude": -33.933282,
-    "longitude": 18.470759,
-    "tel": "+27 21 486 5300",
-    "postalCode": "7925",
-    "key": "004"
-  },
-  {
-    "name": "No 6 The Boulevard Westway Office Park",
-    "type": "Regional Office",
-    "street": "Spine Road",
-    "location": "Westville, Durban",
-    "province": "Kwa-Zulu Natal",
-    "country": "South Africa",
-    "latitude": -29.851104,
-    "longitude": 30.928801,
-    "tel": "+27 31 204 8400",
-    "postalCode": "3629",
-    "key": "005"
-  },
-  {
-    "name": "Dimension Data Moffett Office Park",
-    "type": "Regional Office",
-    "street": "1st Floor cnr of Overbaakens and William Moffett",
-    "location": "Fairview, Port Elizabeth",
-    "province": "Eastern Cape",
-    "country": "South Africa",
-    "latitude": -33.974048,
-    "longitude": 25.553785,
-    "tel": "+27 41 508 4500",
-    "postalCode": "3629",
-    "key": "006"
-  },
-  {
-    "name": "Eliance House",
-    "type": "Regional Office",
-    "street": "701 Lynnwood Road",
-    "location": "Lynnwood Ridge, Pretoria",
-    "province": "Gauteng",
-    "country": "South Africa",
-    "latitude": -25.768643,
-    "longitude": 28.289825,
-    "tel": "+27 12 471 2500",
-    "postalCode": "3629",
-    "key": "007"
-  },
-  {
-    "name": "Dimension Data, Dubai",
-    "type": "Regional Office",
-    "street": "",
-    "location": "Media City, Dubai",
-    "province": "Dubai",
-    "country": "UAE",
-    "latitude": 25.097684,
-    "longitude": 55.156604,
-    "tel": "+27 12 471 2500",
-    "postalCode": "3629",
-    "key": "008"
-  }
-]
+{
+  "offices":  [
+    {
+      "name": "The Campus, Wembley Building",
+      "type": "Head Office",
+      "street": "57 Sloane Street",
+      "location": "Bryanston",
+      "province": "Gauteng",
+      "country": "South Africa",
+      "position": {
+        "latitude": -26.041365,
+        "longitude": 28.022372
+      },
+      "tel": "+27 11 575 0000",
+      "postalCode": "2021",
+      "key": "001"
+    },
+    {
+      "name": "Highveld Technopark",
+      "type": "Automotive",
+      "street": "1 Pieter Street",
+      "location": "Centurion",
+      "province": "Gauteng",
+      "country": "South Africa",
+      "position": {
+        "latitude": -25.871361,
+        "longitude": 28.187016
+      },
+      "tel": "+27 11 575 1800",
+      "postalCode": "0157",
+      "key": "002"
+    },
+    {
+      "name": "Regency Office Park",
+      "type": "Regional Office",
+      "street": "9 Pieter Street",
+      "location": "Centurion",
+      "province": "Gauteng",
+      "country": "South Africa",
+      "position": {
+        "latitude": -25.870701,
+        "longitude": 28.186161
+      },
+      "tel": "+27 12 648 9800",
+      "postalCode": "0157",
+      "key": "003"
+    },
+    {
+      "name": "Central Building 4th Floor",
+      "type": "Regional Office",
+      "street": "2 Fir Road",
+      "location": "Black River Park, Observatory",
+      "province": "Cape Town",
+      "country": "South Africa",
+      "position": {
+        "latitude": -33.933282,
+        "longitude": 18.470759
+      },
+      "tel": "+27 21 486 5300",
+      "postalCode": "7925",
+      "key": "004"
+    },
+    {
+      "name": "No 6 The Boulevard Westway Office Park",
+      "type": "Regional Office",
+      "street": "Spine Road",
+      "location": "Westville, Durban",
+      "province": "Kwa-Zulu Natal",
+      "country": "South Africa",
+      "position": {
+        "latitude": -29.851104,
+        "longitude": 30.928801
+      },
+      "tel": "+27 31 204 8400",
+      "postalCode": "3629",
+      "key": "005"
+    },
+    {
+      "name": "Dimension Data Moffett Office Park",
+      "type": "Regional Office",
+      "street": "1st Floor cnr of Overbaakens and William Moffett",
+      "location": "Fairview, Port Elizabeth",
+      "province": "Eastern Cape",
+      "country": "South Africa",
+      "position": {
+        "latitude": -33.974048,
+        "longitude": 25.553785
+      },
+
+      "tel": "+27 41 508 4500",
+      "postalCode": "3629",
+      "key": "006"
+    },
+    {
+      "name": "Eliance House",
+      "type": "Regional Office",
+      "street": "701 Lynnwood Road",
+      "location": "Lynnwood Ridge, Pretoria",
+      "province": "Gauteng",
+      "country": "South Africa",
+      "position": {
+        "latitude": -25.768643,
+        "longitude": 28.289825
+      },
+
+      "tel": "+27 12 471 2500",
+      "postalCode": "3629",
+      "key": "007"
+    },
+    {
+      "name": "Dimension Data, Dubai",
+      "type": "Regional Office",
+      "street": "",
+      "location": "Media City, Dubai",
+      "province": "Dubai",
+      "country": "UAE",
+      "position": {
+        "latitude": 25.097684,
+        "longitude": 55.156604
+      },
+      "tel": "+27 12 471 2500",
+      "postalCode": "3629",
+      "key": "008"
+    }
+
+  ]
+}
